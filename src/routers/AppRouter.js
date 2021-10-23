@@ -1,3 +1,4 @@
+// https://reactrouter.com/web/example/basic
 import React from 'react';
 import {
     BrowserRouter as Router,
@@ -12,7 +13,8 @@ export const AppRouter = () => {
     return (
         <Router>
             {/* Se recomienda usar el DIV para contener el SWITCH, no es obligatorio */}
-            <div>
+            <div className="auth__main">
+                <div className="auth__box-container">
                 <Switch>
                     <Route
                         path='/auth'
@@ -25,6 +27,7 @@ export const AppRouter = () => {
                     />
                     <Redirect to='/auth/login'/>
                 </Switch>
+                </div>
             </div>
         </Router>
     )
