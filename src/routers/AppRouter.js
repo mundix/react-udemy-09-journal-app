@@ -8,21 +8,6 @@ import {
 import { JournalScreen } from '../component/journal/JournalScreen';
 import { AuthRouter } from './AuthRouter';
 
-/**
- *  Route #1 
- *    { 
- *      path=/auth
- *      no exact
- *      component=AuthRouter
- *      }
- *    { 
- *      Main Route
- *      path=/
- *      exact
- *      component=JournalApp
- *      }
- * 
- */
 export const AppRouter = () => {
     return (
         <Router>
