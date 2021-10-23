@@ -26,18 +26,20 @@ import { AuthRouter } from './AuthRouter';
 export const AppRouter = () => {
     return (
         <Router>
-            <Switch>
-                <Route 
-                    path='/auth' 
-                    component={AuthRouter}
+            {/* Se recomienda usar el DIV para contener el SWITCH, no es obligatorio */}
+            <div>
+                <Switch>
+                    <Route
+                        path='/auth'
+                        component={AuthRouter}
                     />
-                    <Route 
+                    <Route
                         path='/'
                         exact
                         component={JournalScreen}
-                        />
-                        <Redirect to='/'/>
-            </Switch>
+                    />
+                </Switch>
+            </div>
         </Router>
     )
 }
