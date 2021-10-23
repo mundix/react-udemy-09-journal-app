@@ -1,9 +1,23 @@
-import React from 'react'
-
+import React from 'react';
+import { Route } from 'react-router-dom';
+import { LoginScreen } from '../component/login/LoginScreen';
+import { RegisterScreen } from '../component/login/RegisterScreen';
+/**
+ * // ROUTER ... no va 
+ * path='/auth/login'
+ * no exact
+ * component= LoginScreen
+ * 
+ * path="auth/register"
+ * no exact
+ * component RegisterScreen
+ * 
+ */
 export const AuthRouter = () => {
     return (
-        <div>
-            <h1>AuthRouter</h1>
-        </div>
+       <>
+        <Route path='/auth/login' component={LoginScreen}/>
+        <Route path='/auth/register' component={RegisterScreen}/>
+       </>
     )
 }
