@@ -23,6 +23,7 @@ export const AppRouter = () => {
                         exact
                         component={JournalScreen}
                     />
+                    <Redirect to='/auth/login'/>
                 </Switch>
             </div>
         </Router>
