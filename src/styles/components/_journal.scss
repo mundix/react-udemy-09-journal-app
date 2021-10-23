@@ -1,0 +1,15 @@
+
+.journal__main-content {
+    display: flex;
+}
+
+.journal__sidebar {
+    background-color: $dark-grey;
+    color: white;
+    display: flex;
+    flex-direction: column; //?? que hace esto ?
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 450px;
+}

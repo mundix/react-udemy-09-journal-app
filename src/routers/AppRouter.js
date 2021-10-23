@@ -13,8 +13,7 @@ export const AppRouter = () => {
     return (
         <Router>
             {/* Se recomienda usar el DIV para contener el SWITCH, no es obligatorio */}
-            <div className="auth__main">
-                <div className="auth__box-container">
+                <div>
                 <Switch>
                     <Route
                         path='/auth'
@@ -22,13 +21,11 @@ export const AppRouter = () => {
                     />
                     <Route
                         path='/'
-                        exact
                         component={JournalScreen}
                     />
                     <Redirect to='/auth/login'/>
                 </Switch>
                 </div>
-            </div>
         </Router>
     )
 }
