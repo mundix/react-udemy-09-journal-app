@@ -4,26 +4,33 @@ import { Link } from 'react-router-dom';
 export const LoginScreen = () => {
     return (
         <>
-            <h3>Login</h3>
+            <h3 className="auth__title">Login</h3>
             <form >
                 <input
                     type="text"
-                    placeholder="email"
+                    placeholder="Email"
                     name="email"
+                    className="auth__input"
+                    autoComplete="off"
+
                 />
                 <input
                     type="password"
                     placeholder="password"
                     name="password"
+                    className="auth__input"
                 />
 
-                <button type='submit'>
+                <button 
+                    type='submit' 
+                    className="btn btn-primary btn-block" 
+                    // disabled={true}
+                    >
                     Login
                 </button>
 
-                <hr />
 
-                <div>
+                <div className="auth__social-networks">
                     <p>Login With Social Network</p>
                 </div>
                 <div
