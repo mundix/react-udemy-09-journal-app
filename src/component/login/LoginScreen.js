@@ -43,7 +43,7 @@ export const LoginScreen = () => {
                         <b>Sign in with google</b>
                     </p>
                 </div>
-                <Link
+                <Link className="link"
                     to='/auth/register'
                 >
                     Create New Account
