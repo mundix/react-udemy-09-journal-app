@@ -14,7 +14,7 @@ export const NoteScreen = () => {
 
                 <textarea
                     placeholder="What happend today"
-                    className="notes__textarea"
+                    className="notes__textarea" 
                 ></textarea>
                 <div className="notes__image">
                     <img
