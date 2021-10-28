@@ -8,7 +8,7 @@ const reducers = combineReducers({
     auth: authReducer,
 });
 
-// Lo importaremos en el punto mas alto de la app , JournalApp
+//* Lo importaremos en el punto mas alto de la app , JournalApp
 export const store = createStore(
     reducers,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
