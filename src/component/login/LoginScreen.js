@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 // ?para hacer el dispatch se usa un hook que react redux me facilita
 import {useDispatch} from 'react-redux'; 
 import { useForm } from '../../hooks/useForm';
-import { login } from '../../actions/auth';
+// import { login } from '../../actions/auth';
+import {  startLoginEmailPassword } from '../../actions/auth';
 
 export const LoginScreen = () => {
 
@@ -18,7 +19,8 @@ export const LoginScreen = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        dispatch(login(12345, 'Hernando')); //importado de las acciones 
+        // dispatch(login(12345, 'Hernando')); //importado de las acciones 
+        dispatch(startLoginEmailPassword(email, password)); //importado de las acciones 
 
         //? Como hago un dispatch a una action a mi store, 
         //? primero hay que crear la action en el forlder actions que debo crear si no existe 
