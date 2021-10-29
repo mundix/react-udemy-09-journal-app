@@ -10,14 +10,17 @@ export const startLoginEmailPassword = (email, password) => {
         }, 3500);
     }
 }
-
+// ?  Tarea Async 
 export const startGoogleLogin = () => {
     return (dispatch) => {
         const auth = getAuth();
         signInWithPopup(auth, googleAuthProvider)
-            .then(({ user }) => {
-                dispatch(login(user.uid, user.displayName))
-            });
+        // Esto Responde con user Credentials 
+        // .then(userCredentials => {  
+        .then(({user}) => {  
+            // console.log(userCredentials);
+            dispatch(login(user.uid, user.displayName))
+        })
     }
 }
 

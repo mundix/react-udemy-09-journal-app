@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {useDispatch} from 'react-redux'; 
 import { useForm } from '../../hooks/useForm';
 // import { login } from '../../actions/auth';
-import {  startLoginEmailPassword } from '../../actions/auth';
+import {  startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 
 export const LoginScreen = () => {
 
@@ -26,6 +26,11 @@ export const LoginScreen = () => {
         //? primero hay que crear la action en el forlder actions que debo crear si no existe 
         //? Acciones que tieneq ue ver con auth, con el journal con interfaz de usaurio etc...
 
+    }
+
+    const handleGoogleLogin = () => {
+        // Exporta la accion el metodo startGoogleLogin 
+        dispatch(startGoogleLogin());
     }
 
     return (
@@ -64,6 +69,7 @@ export const LoginScreen = () => {
                 </div>
                 <div
                     className="google-btn"
+                    onClick={handleGoogleLogin}
                 >
                     <div className="google-icon-wrapper">
                         <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />

@@ -1,3 +1,4 @@
+//* Firebase version 2021-10 , on React 17
 import 'firebase/firestore';
 import 'firebase/auth';
 // Import the functions you need from the SDKs you need
